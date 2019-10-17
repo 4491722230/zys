@@ -9,7 +9,8 @@ import tk.mybatis.spring.annotation.MapperScan;
 @SpringBootApplication
 @EnableCaching
 @EnableSwagger2
-@MapperScan("store.zys.core.system.mapper")
+
+@MapperScan(basePackages = {"store.zys.mapper","store.zys.security.handle"})
 public class StartApplication {
 
     public static void main(String[] args) {

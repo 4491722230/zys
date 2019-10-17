@@ -1,19 +1,20 @@
 package store.zys.core.system.service.impl;
 
 import org.springframework.beans.factory.annotation.Autowired;
-
 import org.springframework.cache.annotation.CacheEvict;
 import org.springframework.cache.annotation.CachePut;
 import org.springframework.cache.annotation.Cacheable;
 import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
-import store.zys.core.system.dto.User;
-import store.zys.core.system.mapper.UserMapper;
 import store.zys.core.system.service.UserService;
-import tk.mybatis.mapper.entity.Example;
-
+import store.zys.entity.User;
+import store.zys.mapper.UserMapper;
 
 import java.util.List;
+
+//import store.zys.core.system.mapper.UserMapper;
+
+//import store.zys.core.system.dto.User;
 
 /**
  * @Author: zengyusheng
@@ -23,7 +24,6 @@ import java.util.List;
 @Service
 public class UserServiceImpl implements UserService {
     @Autowired
-
     private UserMapper userMapper;
 
 
@@ -88,7 +88,7 @@ public class UserServiceImpl implements UserService {
     @Override
     @Transactional
     @CacheEvict(value = "user",key = "#p0")
-    public int delete(Long id) {
+    public int delete(String id) {
         User user = new User();
         user.setUserId(id);
         int delete = userMapper.delete(user);
@@ -96,7 +96,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public int delete(Long[] ids) {
+    public int delete(String[] ids) {
         return 0;
     }
 
@@ -131,7 +131,7 @@ public class UserServiceImpl implements UserService {
     }
 
     @Override
-    public User get(Long id) {
+    public User get(String id) {
         return null;
     }
 

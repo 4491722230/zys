@@ -98,7 +98,7 @@ public interface Service<T> {
      * @return
      */
 
-    int delete(Long id);
+    int delete(String id);
 
 
     /**
@@ -107,7 +107,7 @@ public interface Service<T> {
      * @param ids 类似[1,2,3]，不能为空
      */
 
-    int delete(Long[] ids);
+    int delete(String[] ids);
 
 
     /**
@@ -186,7 +186,7 @@ public interface Service<T> {
      * @return
      */
 
-    T get(Long id);
+    T get(String id);
 
 
     /**

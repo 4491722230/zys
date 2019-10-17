@@ -7,7 +7,6 @@
         <groupId>org.springframework.boot</groupId>
         <artifactId>spring-boot-starter-parent</artifactId>
         <version>1.5.9.RELEASE</version>
-        <relativePath/> <!-- lookup parent from repository -->
     </parent>
     <groupId>store.zengyusheng</groupId>
     <artifactId>zys</artifactId>
@@ -20,8 +19,25 @@
         <module>zys-starter-cache</module>
         <module>zys-starter-swagger2</module>
         <module>zys-starter-common</module>
-        <module>zys-starter-security</module>
+        <module>start-zys-security</module>
+        <module>start-zys-entity</module>
+        <module>start-zys-mapper</module>
     </modules>
+    <properties>
+        <java.version>1.8</java.version>
+        <java.version>1.8</java.version>
+        <commons.io.version>2.6</commons.io.version>
+        <commons.fileupload.version>1.3.3</commons.fileupload.version>
+        <commons.collections.version>3.2</commons.collections.version>
+        <commons.beanutils.version>1.9.2</commons.beanutils.version>
+        <commons.codec.version>1.10</commons.codec.version>
+        <commons.lang3.version>3.8.1</commons.lang3.version>
+        <guava.version>23.0</guava.version>
+        <mysql-connector.version>8.0.15</mysql-connector.version>
+        <springboot.mybaits.version>1.1.1</springboot.mybaits.version>
+        <springboot.mapper.version>2.0.0</springboot.mapper.version>
+        <pagehelper.springboot.version>1.2.3</pagehelper.springboot.version>
+    </properties>
     <dependencies>
         <dependency>
             <groupId>org.springframework.boot</groupId>
@@ -36,7 +52,6 @@
             <artifactId>spring-boot-starter-test</artifactId>
             <scope>test</scope>
         </dependency>
-
     </dependencies>
 
     <build>

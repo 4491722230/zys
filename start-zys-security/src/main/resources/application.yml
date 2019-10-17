@@ -1,0 +1,6 @@
+jwt:
+  tokenHeader: Authorization
+  tokenPrefix: Bearer
+  secret: lanjwt
+  expiration: 3600
+  rememberExpiration: 604800

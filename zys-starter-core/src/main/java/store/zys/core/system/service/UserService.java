@@ -1,11 +1,7 @@
 package store.zys.core.system.service;
 
-import org.springframework.beans.factory.annotation.Autowired;
 import store.zys.common.base.Service;
-import store.zys.core.system.dto.User;
-import store.zys.core.system.mapper.UserMapper;
-
-import java.util.List;
+import store.zys.entity.User;
 
 
 public interface UserService extends Service<User> {

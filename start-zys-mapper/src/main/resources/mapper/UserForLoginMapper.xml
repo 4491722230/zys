@@ -1,0 +1,25 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="store.zys.mapper.UserForLoginMapper">
+
+    <resultMap id="UserDTOMap" type="store.zys.dto.UserDTO">
+        <id column="user_id" property="userId"></id>
+        <result column="username" property="userName"></result>
+        <result column="password" property="userPassword"></result>
+        <collection property="roles" column="user_id" select="store.zys.security.mapper.UserRoleMapper.roles"></collection>
+    </resultMap>
+
+    <select id="getUserDto1" resultMap="UserDTOMap" parameterType="string">
+        SELECT
+            u.username,u.user_id,u.password
+        FROM
+            sys_user u
+        WHERE
+            u.username = #{username}
+    </select>
+    <select id="findAll" resultType="UserDTOMap">
+        select u.username,u.user_id,u.password FROM
+            sys_user u
+    </select>
+</mapper>

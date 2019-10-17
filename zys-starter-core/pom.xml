@@ -13,21 +13,21 @@
     <name>zys-starter-core</name>
     <description>Demo project for Spring Boot</description>
 
-    <properties>
-        <java.version>1.8</java.version>
-        <java.version>1.8</java.version>
-        <commons.io.version>2.6</commons.io.version>
-        <commons.fileupload.version>1.3.3</commons.fileupload.version>
-        <commons.collections.version>3.2</commons.collections.version>
-        <commons.beanutils.version>1.9.2</commons.beanutils.version>
-        <commons.codec.version>1.10</commons.codec.version>
-        <commons.lang3.version>3.8.1</commons.lang3.version>
-        <guava.version>23.0</guava.version>
-        <mysql-connector.version>8.0.15</mysql-connector.version>
-        <springboot.mybaits.version>1.1.1</springboot.mybaits.version>
-        <springboot.mapper.version>2.0.0</springboot.mapper.version>
-        <pagehelper.springboot.version>1.2.3</pagehelper.springboot.version>
-    </properties>
+    <!--<properties>-->
+        <!--<java.version>1.8</java.version>-->
+        <!--<java.version>1.8</java.version>-->
+        <!--<commons.io.version>2.6</commons.io.version>-->
+        <!--<commons.fileupload.version>1.3.3</commons.fileupload.version>-->
+        <!--<commons.collections.version>3.2</commons.collections.version>-->
+        <!--<commons.beanutils.version>1.9.2</commons.beanutils.version>-->
+        <!--<commons.codec.version>1.10</commons.codec.version>-->
+        <!--<commons.lang3.version>3.8.1</commons.lang3.version>-->
+        <!--<guava.version>23.0</guava.version>-->
+        <!--<mysql-connector.version>8.0.15</mysql-connector.version>-->
+        <!--<springboot.mybaits.version>1.1.1</springboot.mybaits.version>-->
+        <!--<springboot.mapper.version>2.0.0</springboot.mapper.version>-->
+        <!--<pagehelper.springboot.version>1.2.3</pagehelper.springboot.version>-->
+    <!--</properties>-->
     <build>
         <plugins>
             <plugin>
@@ -51,16 +51,16 @@
         <!--mysql jdbc驱动-->
 
         <!--mybaits依赖-->
-        <dependency>
-            <groupId>org.mybatis.spring.boot</groupId>
-            <artifactId>mybatis-spring-boot-starter</artifactId>
-            <version>2.1.0</version>
-        </dependency>
-        <dependency>
-            <groupId>tk.mybatis</groupId>
-            <artifactId>mapper-spring-boot-starter</artifactId>
-            <version>${springboot.mapper.version}</version>
-        </dependency>
+        <!--<dependency>-->
+            <!--<groupId>org.mybatis.spring.boot</groupId>-->
+            <!--<artifactId>mybatis-spring-boot-starter</artifactId>-->
+            <!--<version>2.1.0</version>-->
+        <!--</dependency>-->
+        <!--<dependency>-->
+            <!--<groupId>tk.mybatis</groupId>-->
+            <!--<artifactId>mapper-spring-boot-starter</artifactId>-->
+            <!--<version>${springboot.mapper.version}</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>com.github.pagehelper</groupId>
             <artifactId>pagehelper-spring-boot-starter</artifactId>
@@ -86,22 +86,48 @@
             <groupId>store.zengyusheng</groupId>
             <artifactId>zys-starter-swagger2</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <!--<exclusions>-->
+                <!--<exclusion>-->
+                    <!--<artifactId>guava</artifactId>-->
+                    <!--<groupId>com.google.guava</groupId>-->
+                <!--</exclusion>-->
+            <!--</exclusions>-->
         </dependency>
         <dependency>
             <groupId>store.zengyusheng</groupId>
             <artifactId>zys-starter-cache</artifactId>
             <version>0.0.1-SNAPSHOT</version>
         </dependency>
+
+        <!--<dependency>-->
+            <!--<groupId>store.zengyusheng</groupId>-->
+            <!--<artifactId>start-zys-security</artifactId>-->
+            <!--<version>0.0.1-SNAPSHOT</version>-->
+        <!--</dependency>-->
         <dependency>
             <groupId>store.zengyusheng</groupId>
-            <artifactId>zys-starter-common</artifactId>
+            <artifactId>start-zys-security</artifactId>
             <version>0.0.1-SNAPSHOT</version>
+            <exclusions>
+                <exclusion>
+                    <artifactId>fastjson</artifactId>
+                    <groupId>com.alibaba</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>janino</artifactId>
+                    <groupId>org.codehaus.janino</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>mysql-connector-java</artifactId>
+                    <groupId>mysql</groupId>
+                </exclusion>
+                <exclusion>
+                    <artifactId>guava</artifactId>
+                    <groupId>com.google.guava</groupId>
+                </exclusion>
+            </exclusions>
         </dependency>
-        <dependency>
-            <groupId>store.zengyusheng</groupId>
-            <artifactId>zys-starter-security</artifactId>
-            <version>0.0.1-SNAPSHOT</version>
-        </dependency>
+
     </dependencies>
 
 </project>
